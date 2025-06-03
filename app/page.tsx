@@ -106,11 +106,11 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-[#E53935] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Calendar className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-[#212121]">Smart Scheduling</CardTitle>
+                <CardTitle className="text-xl font-bold text-[#212121]">Effortless Scheduling</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 text-center">
-                  Define availability and let clients book without back-and-forth.
+                  Smart booking system with automated reminders and calendar sync. Never double-book again.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -120,11 +120,11 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-[#E53935] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-[#212121]">Client CRM</CardTitle>
+                <CardTitle className="text-xl font-bold text-[#212121]">Client Progress Tracking</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 text-center">
-                  Track sessions, goals, and private notes all in one place.
+                  Track sessions, goals, and private notes all in one place.Store detailed client notes, track progress, and maintain comprehensive session histories.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -138,7 +138,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 text-center">
-                  Know your monthly revenue, cancellations, and client stats.
+                  Analytics and insights to help you understand your practice and grow your business.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -148,132 +148,193 @@ export default function HomePage() {
 
       {/* Problem/Solution Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#212121] mb-4">
-              Still using spreadsheets and scattered chats?
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="border-2 border-gray-200 hover:border-[#E53935] transition-colors">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-bold text-[#212121] mb-4">Missed sessions?</h3>
-                <div className="text-2xl mb-4">↓</div>
-                <p className="text-[#E53935] font-semibold">SessionFlow keeps your calendar tight.</p>
-              </CardContent>
-            </Card>
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl lg:text-4xl font-bold text-[#212121] mb-4">
+        Still texting and scribbling notes?
+      </h2>
+    </div>
 
-            <Card className="border-2 border-gray-200 hover:border-[#E53935] transition-colors">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-bold text-[#212121] mb-4">Messy client info?</h3>
-                <div className="text-2xl mb-4">↓</div>
-                <p className="text-[#E53935] font-semibold">Track everything in one profile.</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {/* Chaotic Way */}
+      <div className="bg-white border border-red-200 rounded-lg shadow-sm p-8">
+        <h3 className="text-xl font-bold text-[#E53935] mb-4">The Chaotic Way</h3>
+        <ul className="space-y-3 text-[#212121]">
+          <li className="flex items-start">
+            <span className="text-[#E53935] mr-2 mt-1">•</span>
+            Texting clients to schedule and reschedule sessions
+          </li>
+          <li className="flex items-start">
+            <span className="text-[#E53935] mr-2 mt-1">•</span>
+            Losing client notes written on random papers
+          </li>
+          <li className="flex items-start">
+            <span className="text-[#E53935] mr-2 mt-1">•</span>
+            No clear view of your business growth or patterns
+          </li>
+          <li className="flex items-start">
+            <span className="text-[#E53935] mr-2 mt-1">•</span>
+            Spending more time organizing than helping clients
+          </li>
+        </ul>
+      </div>
 
-      {/* How It Works Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#212121] mb-4">How it works</h2>
-          </div>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              {[
-                "Create a free account",
-                "Add your clients",
-                "Set your calendar",
-                "Let clients book",
-                "Track revenue and progress",
-              ].map((step, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <div className="w-8 h-8 bg-[#E53935] text-white rounded-full flex items-center justify-center font-bold">
-                    {index + 1}
-                  </div>
-                  <p className="text-lg text-[#212121] font-medium">{step}</p>
-                </div>
-              ))}
-            </div>
-            <div className="flex justify-center space-x-4">
-              <div className="w-48 h-[400px] bg-[#212121] rounded-[2rem] p-2 shadow-xl">
-                <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden">
-                  <Image
-                    src="/images/calendar.png"
-                    alt="Calendar view"
-                    width={192}
-                    height={396}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+      {/* SessionFlow Way */}
+      <div className="bg-green-50 border border-green-200 rounded-lg shadow-sm p-8">
+        <h3 className="text-xl font-bold text-green-700 mb-4">The SessionFlow Way</h3>
+        <ul className="space-y-3 text-[#212121]">
+          <li className="flex items-start">
+            <span className="text-green-600 mr-2 mt-1">✓</span>
+            Automated scheduling with client self-booking
+          </li>
+          <li className="flex items-start">
+            <span className="text-green-600 mr-2 mt-1">✓</span>
+            Digital client profiles with searchable session notes
+          </li>
+          <li className="flex items-start">
+            <span className="text-green-600 mr-2 mt-1">✓</span>
+            Progress tracking and business analytics dashboard
+          </li>
+          <li className="flex items-start">
+            <span className="text-green-600 mr-2 mt-1">✓</span>
+            More time for what matters: helping your clients
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+     <section className="py-16 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl lg:text-4xl font-bold text-[#212121] mb-4">How It Works</h2>
+    </div>
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Left: Steps */}
+      <div className="space-y-8">
+        {[
+          {
+            title: "Join the waitlist",
+            desc: "Sign up with your email to secure your early access",
+            icon: "📩",
+          },
+          {
+            title: "Get notified at launch",
+            desc: "We’ll email you when SessionFlow is ready for you",
+            icon: "📱",
+          },
+          {
+            title: "Choose your role",
+            desc: "Select 'Trainer' or 'Therapist' during onboarding setup",
+            icon: "🧑‍⚕️",
+          },
+          {
+            title: "Add your clients",
+            desc: "Import existing clients or add new ones to your practice",
+            icon: "👥",
+          },
+          {
+            title: "Start managing sessions",
+            desc: "Focus on your clients while SessionFlow handles the rest",
+            icon: "▶️",
+          },
+        ].map((step, index) => (
+          <div key={index} className="flex items-start space-x-4">
+            <div className="flex flex-col items-center">
+              <div className="w-10 h-10 bg-[#E53935] text-white rounded-full flex items-center justify-center font-bold">
+                {index + 1}
               </div>
-              <div className="w-48 h-[400px] bg-[#212121] rounded-[2rem] p-2 shadow-xl">
-                <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden">
-                  <Image
-                    src="/images/list-overview.png"
-                    alt="Client management"
-                    width={192}
-                    height={396}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
+            </div>
+            <div>
+              <p className="text-lg text-[#212121] font-semibold">{step.title}</p>
+              <p className="text-gray-600 text-sm">{step.icon} {step.desc}</p>
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
 
-      {/* Pricing Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#212121] mb-4">Start Free. Upgrade When You Grow.</h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <Card className="border-2 border-gray-200 hover:border-[#E53935] transition-colors">
-              <CardHeader className="text-center">
-                <CardTitle className="text-lg font-bold text-[#212121]">Free</CardTitle>
-                <div className="text-2xl font-bold text-[#E53935]">
-                  €0<span className="text-sm text-gray-500">/month</span>
-                </div>
-                <CardDescription>5 clients</CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-2 border-gray-200 hover:border-[#E53935] transition-colors">
-              <CardHeader className="text-center">
-                <CardTitle className="text-lg font-bold text-[#212121]">Starter</CardTitle>
-                <div className="text-2xl font-bold text-[#E53935]">
-                  €20<span className="text-sm text-gray-500">/month</span>
-                </div>
-                <CardDescription>25 clients</CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-2 border-gray-200 hover:border-[#E53935] transition-colors">
-              <CardHeader className="text-center">
-                <CardTitle className="text-lg font-bold text-[#212121]">Pro</CardTitle>
-                <div className="text-2xl font-bold text-[#E53935]">
-                  €39<span className="text-sm text-gray-500">/month</span>
-                </div>
-                <CardDescription>60 clients</CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-2 border-gray-200 hover:border-[#E53935] transition-colors">
-              <CardHeader className="text-center">
-                <CardTitle className="text-lg font-bold text-[#212121]">Enterprise</CardTitle>
-                <div className="text-2xl font-bold text-[#E53935]">
-                  €79<span className="text-sm text-gray-500">/month</span>
-                </div>
-                <CardDescription>Unlimited</CardDescription>
-              </CardHeader>
-            </Card>
+      {/* Right: App Screens */}
+      <div className="flex justify-center space-x-4">
+        <div className="w-48 h-[400px] bg-[#212121] rounded-[2rem] p-2 shadow-xl">
+          <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden">
+            <Image
+              src="/images/calendar.png"
+              alt="Calendar view"
+              width={192}
+              height={396}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
-      </section>
+        <div className="w-48 h-[400px] bg-[#212121] rounded-[2rem] p-2 shadow-xl">
+          <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden">
+            <Image
+              src="/images/list-overview.png"
+              alt="Client management"
+              width={192}
+              height={396}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <section className="py-16 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
+        Pricing That Grows With You
+      </h2>
+      <p className="text-gray-600">Only pay when your practice grows</p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      {/* Free Plan */}
+      <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
+        <CardHeader className="space-y-2">
+          <CardTitle className="text-lg font-semibold text-slate-900">Free</CardTitle>
+          <p className="text-gray-500 text-sm">Up to 5 clients</p>
+          <p className="text-2xl font-bold text-slate-900">Free</p>
+        </CardHeader>
+      </Card>
+
+      {/* Starter Plan (Most Popular) */}
+      <Card className="border border-[#E53935] bg-red-50 text-center py-8 rounded-xl shadow-sm relative">
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#E53935] text-white text-xs font-semibold px-3 py-1 rounded-full">
+          Most Popular
+        </span>
+        <CardHeader className="space-y-2">
+          <CardTitle className="text-lg font-semibold text-slate-900">Starter</CardTitle>
+          <p className="text-gray-500 text-sm">Up to 25 clients</p>
+          <p className="text-2xl font-bold text-slate-900">$19/mo</p>
+        </CardHeader>
+      </Card>
+
+      {/* Pro Plan */}
+      <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
+        <CardHeader className="space-y-2">
+          <CardTitle className="text-lg font-semibold text-slate-900">Pro</CardTitle>
+          <p className="text-gray-500 text-sm">Up to 100 clients</p>
+          <p className="text-2xl font-bold text-slate-900">$39/mo</p>
+        </CardHeader>
+      </Card>
+
+      {/* Enterprise Plan */}
+      <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
+        <CardHeader className="space-y-2">
+          <CardTitle className="text-lg font-semibold text-slate-900">Enterprise</CardTitle>
+          <p className="text-gray-500 text-sm">Unlimited clients</p>
+          <p className="text-2xl font-bold text-slate-900">$79/mo</p>
+        </CardHeader>
+      </Card>
+    </div>
+  </div>
+</section>
 
       {/* Final CTA Section */}
       <section id="waitlist-form" className="py-16 bg-[#212121]">
