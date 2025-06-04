@@ -316,56 +316,61 @@ export default function HomePage() {
 
       {/* Pricing Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
-              Pricing That Grows With You
-            </h2>
-            <p className="text-gray-600">Only pay when your practice grows</p>
-          </div>
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
+        Pricing That Grows With You
+      </h2>
+      <p className="text-gray-600">Only pay when your practice grows</p>
+    </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {/* Free Plan */}
-            <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
-              <CardHeader className="space-y-2">
-                <CardTitle className="text-lg font-semibold text-slate-900">Free</CardTitle>
-                <p className="text-gray-500 text-sm">Up to 5 clients</p>
-                <p className="text-2xl font-bold text-slate-900">Free</p>
-              </CardHeader>
-            </Card>
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      {/* Free Plan */}
+      <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
+        <CardHeader className="space-y-2">
+          <CardTitle className="text-lg font-semibold text-slate-900">Free</CardTitle>
+          <p className="text-gray-500 text-sm">Up to 5 clients</p>
+          <p className="text-2xl font-bold text-slate-900">Free</p>
+        </CardHeader>
+      </Card>
 
-            {/* Starter Plan (Most Popular) */}
-            <Card className="border border-[#E53935] bg-red-50 text-center py-8 rounded-xl shadow-sm relative">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#E53935] text-white text-xs font-semibold px-3 py-1 rounded-full">
-                Most Popular
-              </span>
-              <CardHeader className="space-y-2">
-                <CardTitle className="text-lg font-semibold text-slate-900">Starter</CardTitle>
-                <p className="text-gray-500 text-sm">Up to 25 clients</p>
-                <p className="text-2xl font-bold text-slate-900">$19/mo</p>
-              </CardHeader>
-            </Card>
+      {/* Starter Plan */}
+      <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
+        <CardHeader className="space-y-2">
+          <CardTitle className="text-lg font-semibold text-slate-900">Starter</CardTitle>
+          <p className="text-gray-500 text-sm">Up to 25 clients</p>
+          <p className="text-2xl font-bold text-slate-900">$19/mo</p>
+        </CardHeader>
+      </Card>
 
-            {/* Pro Plan */}
-            <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
-              <CardHeader className="space-y-2">
-                <CardTitle className="text-lg font-semibold text-slate-900">Pro</CardTitle>
-                <p className="text-gray-500 text-sm">Up to 100 clients</p>
-                <p className="text-2xl font-bold text-slate-900">$39/mo</p>
-              </CardHeader>
-            </Card>
+      {/* Pro Plan - Early Bird */}
+      <Card className="border border-[#E53935] text-center py-8 rounded-xl shadow-md bg-red-50 relative">
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#E53935] text-white text-xs font-semibold px-3 py-1 rounded-full">
+          Early Bird
+        </span>
+        <CardHeader className="space-y-2">
+          <CardTitle className="text-lg font-semibold text-slate-900">Pro</CardTitle>
+          <p className="text-gray-500 text-sm">Up to 100 clients</p>
+          <p className="text-2xl font-bold text-slate-900">€9.99/mo</p>
+          <p className="text-xs text-gray-600">
+            Lock this price forever by pre-ordering now.<br />
+            Cancel anytime. 100% refund if we don’t launch in 4 months.
+          </p>
+        </CardHeader>
+      </Card>
 
-            {/* Enterprise Plan */}
-            <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
-              <CardHeader className="space-y-2">
-                <CardTitle className="text-lg font-semibold text-slate-900">Enterprise</CardTitle>
-                <p className="text-gray-500 text-sm">Unlimited clients</p>
-                <p className="text-2xl font-bold text-slate-900">$79/mo</p>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-      </section>
+      {/* Enterprise Plan */}
+      <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
+        <CardHeader className="space-y-2">
+          <CardTitle className="text-lg font-semibold text-slate-900">Enterprise</CardTitle>
+          <p className="text-gray-500 text-sm">Unlimited clients</p>
+          <p className="text-2xl font-bold text-slate-900">$79/mo</p>
+        </CardHeader>
+      </Card>
+    </div>
+  </div>
+</section>
+
 
       {/* Final CTA + Waitlist Form */}
       <section id="waitlist-form" className="py-16 bg-[#212121]">
