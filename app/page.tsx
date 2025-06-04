@@ -15,6 +15,13 @@ export default function HomePage() {
     }
   }
 
+  const scrollToPricing = () => {
+    const formElement = document.getElementById("pricing")
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   useEffect(() => {
     // Load Tally script
     const script = document.createElement("script")
@@ -50,7 +57,7 @@ export default function HomePage() {
               >
                 Join Waitlist
               </Button>
-              <Button className="bg-[#E53935] hover:bg-red-600 text-white" onClick={scrollToForm}>
+              <Button className="bg-[#E53935] hover:bg-red-600 text-white" onClick={scrollToPricing}>
                 Pre-Order Pro
               </Button>
             </div>
@@ -74,7 +81,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   className="bg-[#E53935] hover:bg-red-600 text-white px-8 py-4 text-lg font-semibold"
-                  onClick={scrollToForm}
+                  onClick={scrollToPricing}
                 >
                   Unlock Pro at €9.99
                 </Button>
@@ -302,7 +309,7 @@ export default function HomePage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 bg-white">
+      <section id="pricing" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">Pricing That Grows With You</h2>
