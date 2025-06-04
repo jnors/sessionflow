@@ -3,8 +3,9 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
-import { Calendar, Users, TrendingUp } from "lucide-react"
+import { Calendar, Users, TrendingUp, Linkedin, Mail } from "lucide-react"
 import { useEffect } from "react"
+import Link from "next/link"
 
 export default function HomePage() {
   const scrollToForm = () => {
@@ -40,13 +41,7 @@ export default function HomePage() {
       <header className="border-b border-gray-100">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Image
-              src="/images/logo.png"
-              alt="SessionFlow Logo"
-              width={180}
-              height={40}
-              className="h-8 w-auto"
-            />
+            <Image src="/images/logo.png" alt="SessionFlow Logo" width={180} height={40} className="h-8 w-auto" />
             <div className="space-x-4">
               <Button
                 variant="outline"
@@ -55,10 +50,7 @@ export default function HomePage() {
               >
                 Join Waitlist
               </Button>
-              <Button
-                className="bg-[#E53935] hover:bg-red-600 text-white"
-                onClick={scrollToForm}
-              >
+              <Button className="bg-[#E53935] hover:bg-red-600 text-white" onClick={scrollToForm}>
                 Pre-Order Pro
               </Button>
             </div>
@@ -72,12 +64,11 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl lg:text-6xl font-bold text-[#212121] mb-6 leading-tight">
-                Get SessionFlow Pro for{" "}
-                <span className="text-[#E53935]">€9.99/month</span> — Forever
+                Get SessionFlow Pro for <span className="text-[#E53935]">€9.99/month</span> — Forever
               </h1>
               <p className="text-xl text-gray-600 mb-4 leading-relaxed">
-                Become a founding user and lock in our best pricing ever. Pay now, use later—and get a full refund if we don’t
-                launch within 4 months.
+                Become a founding user and lock in our best pricing ever. Pay now, use later—and get a full refund if we
+                don't launch within 4 months.
               </p>
               <div className="flex flex-col sm:flex-row sm:justify-start justify-center gap-4 mb-6">
                 <Button
@@ -123,9 +114,7 @@ export default function HomePage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#212121] mb-4">
-              Why SessionFlow Works for You
-            </h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#212121] mb-4">Why SessionFlow Works for You</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
@@ -151,8 +140,8 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 text-center">
-                  Track sessions, goals, and private notes all in one place. Store detailed client notes,
-                  track progress, and maintain comprehensive session histories.
+                  Track sessions, goals, and private notes all in one place. Store detailed client notes, track
+                  progress, and maintain comprehensive session histories.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -178,9 +167,7 @@ export default function HomePage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#212121] mb-4">
-              Still texting and scribbling notes?
-            </h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#212121] mb-4">Still texting and scribbling notes?</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -250,7 +237,7 @@ export default function HomePage() {
                 },
                 {
                   title: "Get notified at launch",
-                  desc: "We’ll email you when SessionFlow is ready for you",
+                  desc: "We'll email you when SessionFlow is ready for you",
                   icon: "📱",
                 },
                 {
@@ -316,68 +303,67 @@ export default function HomePage() {
 
       {/* Pricing Section */}
       <section className="py-16 bg-white">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
-        Pricing That Grows With You
-      </h2>
-      <p className="text-gray-600">Only pay when your practice grows</p>
-    </div>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">Pricing That Grows With You</h2>
+            <p className="text-gray-600">Only pay when your practice grows</p>
+          </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-      {/* Free Plan */}
-      <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
-        <CardHeader className="space-y-2">
-          <CardTitle className="text-lg font-semibold text-slate-900">Free</CardTitle>
-          <p className="text-gray-500 text-sm">Up to 5 clients</p>
-          <p className="text-2xl font-bold text-slate-900">Free</p>
-        </CardHeader>
-      </Card>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {/* Free Plan */}
+            <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
+              <CardHeader className="space-y-2">
+                <CardTitle className="text-lg font-semibold text-slate-900">Free</CardTitle>
+                <p className="text-gray-500 text-sm">Up to 5 clients</p>
+                <p className="text-2xl font-bold text-slate-900">Free</p>
+              </CardHeader>
+            </Card>
 
-      {/* Starter Plan */}
-      <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
-        <CardHeader className="space-y-2">
-          <CardTitle className="text-lg font-semibold text-slate-900">Starter</CardTitle>
-          <p className="text-gray-500 text-sm">Up to 25 clients</p>
-          <p className="text-2xl font-bold text-slate-900">$19/mo</p>
-        </CardHeader>
-      </Card>
+            {/* Starter Plan */}
+            <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
+              <CardHeader className="space-y-2">
+                <CardTitle className="text-lg font-semibold text-slate-900">Starter</CardTitle>
+                <p className="text-gray-500 text-sm">Up to 25 clients</p>
+                <p className="text-2xl font-bold text-slate-900">$19/mo</p>
+              </CardHeader>
+            </Card>
 
-      {/* Pro Plan - Early Bird */}
-      <Card className="border border-[#E53935] text-center py-8 rounded-xl shadow-md bg-red-50 relative">
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#E53935] text-white text-xs font-semibold px-3 py-1 rounded-full">
-          Early Bird
-        </span>
-        <CardHeader className="space-y-2">
-          <CardTitle className="text-lg font-semibold text-slate-900">Pro</CardTitle>
-          <p className="text-gray-500 text-sm">Up to 100 clients</p>
-          <p className="text-2xl font-bold text-slate-900">€9.99/mo</p>
-          <p className="text-xs text-gray-600">
-            Lock this price forever by pre-ordering now.<br />
-            Cancel anytime. 100% refund if we don’t launch in 4 months.
-          </p>
-        </CardHeader>
-      </Card>
+            {/* Pro Plan - Early Bird */}
+            <Card className="border border-[#E53935] text-center py-8 rounded-xl shadow-md bg-red-50 relative">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#E53935] text-white text-xs font-semibold px-3 py-1 rounded-full">
+                Early Bird Deal
+              </span>
+              <CardHeader className="space-y-2">
+                <CardTitle className="text-lg font-semibold text-slate-900">Pro</CardTitle>
+                <p className="text-gray-500 text-sm">Up to 100 clients</p>
+                <div className="flex justify-center items-center gap-2">
+                  <p className="text-sm text-gray-400 line-through">€39.99</p>
+                  <p className="text-2xl font-bold text-[#E53935]">€9.99/mo</p>
+                </div>
+                <p className="text-xs text-gray-600 px-4 mt-1">
+                  Save 75% for life — only available during pre-launch.
+                  <br />
+                  Pay just your first month now. Cancel anytime. Full refund if we don't launch within 4 months.
+                </p>
+              </CardHeader>
+            </Card>
 
-      {/* Enterprise Plan */}
-      <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
-        <CardHeader className="space-y-2">
-          <CardTitle className="text-lg font-semibold text-slate-900">Enterprise</CardTitle>
-          <p className="text-gray-500 text-sm">Unlimited clients</p>
-          <p className="text-2xl font-bold text-slate-900">$79/mo</p>
-        </CardHeader>
-      </Card>
-    </div>
-  </div>
-</section>
-
+            {/* Enterprise Plan */}
+            <Card className="border border-gray-200 text-center py-8 rounded-xl shadow-sm">
+              <CardHeader className="space-y-2">
+                <CardTitle className="text-lg font-semibold text-slate-900">Enterprise</CardTitle>
+                <p className="text-gray-500 text-sm">Unlimited clients</p>
+                <p className="text-2xl font-bold text-slate-900">$79/mo</p>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* Final CTA + Waitlist Form */}
       <section id="waitlist-form" className="py-16 bg-[#212121]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Start managing your practice with ease.
-          </h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Start managing your practice with ease.</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             No card required—stay updated, and be the first to get access when we launch.
           </p>
@@ -406,6 +392,89 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center text-[#212121] mb-8">Frequently Asked Questions</h2>
+
+          <div className="space-y-4">
+            {/* Question 1 */}
+            <details className="border border-gray-200 rounded-lg p-4 group open:shadow-md open:border-[#E53935] transition-all">
+              <summary className="cursor-pointer font-semibold text-[#212121] group-open:text-[#E53935]">
+                What happens if the app isn't released?
+              </summary>
+              <p className="mt-2 text-gray-600">
+                If the app isn't launched within the next 4 months, you'll receive a full refund—no questions asked.
+              </p>
+            </details>
+
+            {/* Question 2 */}
+            <details className="border border-gray-200 rounded-lg p-4 group open:shadow-md open:border-[#E53935] transition-all">
+              <summary className="cursor-pointer font-semibold text-[#212121] group-open:text-[#E53935]">
+                Why should I sign up now?
+              </summary>
+              <p className="mt-2 text-gray-600">
+                You'll get full access to the Pro plan for just €9.99/month — a 75% discount from the future price of
+                €39.99/month. This is even cheaper than our Starter plan and will never be offered again.
+              </p>
+            </details>
+
+            {/* Question 3 */}
+            <details className="border border-gray-200 rounded-lg p-4 group open:shadow-md open:border-[#E53935] transition-all">
+              <summary className="cursor-pointer font-semibold text-[#212121] group-open:text-[#E53935]">
+                Do I get early access to the app?
+              </summary>
+              <p className="mt-2 text-gray-600">
+                You'll be one of our very first users and get direct access to our team to shape the app's features
+                around your needs — no strings attached.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      {/*About the Founder section*/}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <h2 className="text-3xl font-bold text-[#212121] mb-4">About the Founder</h2>
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/founder.jpg"
+              alt="João Silva - Founder"
+              width={120}
+              height={120}
+              className="rounded-full mb-4 shadow-lg"
+            />
+            <h3 className="text-xl font-semibold text-[#212121]">João Silva</h3>
+            <p className="text-gray-600 text-sm mb-4">Founder of SessionFlow</p>
+            <p className="text-gray-700 max-w-xl mx-auto mb-4">
+              With a background in engineering and a passion for building products, João is building SessionFlow to
+              simplify the business side of coaching — so you can focus on your clients.
+            </p>
+            <p className="text-gray-500 text-sm mb-6">
+              "I've worked with trainers and freelancers in the past. I was a freelancer myself. SessionFlow is designed
+              with your everyday reality in mind - bringing the best enterprise practices to your freelancing business."
+            </p>
+            <div className="flex space-x-4">
+              <a
+                href="https://www.linkedin.com/in/jnorsilva"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#E53935] hover:text-[#b71c1c] transition-colors"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a
+                href="mailto:joaonorsilva92@gmail.com"
+                className="text-[#E53935] hover:text-[#b71c1c] transition-colors"
+              >
+                <Mail className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-8 border-t border-gray-200">
         <div className="container mx-auto px-4">
@@ -417,7 +486,12 @@ export default function HomePage() {
               height={32}
               className="h-6 w-auto mb-4 md:mb-0"
             />
-            <p className="text-gray-500 text-sm">© 2025 SessionFlow. All rights reserved.</p>
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+              <Link href="/privacy-policy" className="text-gray-500 hover:text-[#E53935] text-sm transition-colors">
+                Privacy Policy
+              </Link>
+              <p className="text-gray-500 text-sm">© 2025 SessionFlow. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </footer>
