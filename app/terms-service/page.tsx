@@ -82,27 +82,28 @@ export default function TermsOfServicePage() {
       </main>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-gray-200">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <Link href="/">
-              <Image
-                src="/images/logo.png"
-                alt="SessionFlow Logo"
-                width={150}
-                height={32}
-                className="h-6 w-auto mb-4 md:mb-0"
-              />
-            </Link>
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <Link href="/terms-of-service" className="text-gray-500 hover:text-[#E53935] text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <p className="text-gray-500 text-sm">© 2025 SessionFlow. All rights reserved.</p>
-            </div>
+            <footer className="py-8 border-t border-gray-200">
+              <div className="container mx-auto px-4">
+                <div className="flex flex-col md:flex-row justify-between items-center">
+                  <Image
+                    src="/images/logo.png"
+                    alt="SessionFlow Logo"
+                    width={150}
+                    height={32}
+                    className="h-6 w-auto mb-4 md:mb-0"
+                  />
+                  <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+                    <Link href="/privacy-policy" className="text-gray-500 hover:text-[#E53935] text-sm transition-colors">
+                      Privacy Policy
+                    </Link>
+                    <Link href="/terms-service" className="text-gray-500 hover:text-[#E53935] text-sm transition-colors">
+                      Terms of Service
+                    </Link>
+                    <p className="text-gray-500 text-sm">© 2025 SessionFlow. All rights reserved.</p>
+                  </div>
+                </div>
+              </div>
+            </footer>
           </div>
-        </div>
-      </footer>
-    </div>
   )
 }
