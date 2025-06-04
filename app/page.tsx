@@ -345,6 +345,13 @@ export default function HomePage() {
                   <br />
                   Pay just your first month now. Cancel anytime. Full refund if we don't launch within 4 months.
                 </p>
+                <div className="mt-6">
+                  <Link href="https://buy.stripe.com/4gM00kafk8RI9lG75Q0RG01" target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-[#E53935] hover:bg-red-600 text-white font-semibold">
+                      Get Early Access
+                    </Button>
+                  </Link>
+                </div>
               </CardHeader>
             </Card>
 
