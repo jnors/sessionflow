@@ -490,6 +490,9 @@ export default function HomePage() {
               <Link href="/privacy-policy" className="text-gray-500 hover:text-[#E53935] text-sm transition-colors">
                 Privacy Policy
               </Link>
+              <Link href="/terms-service" className="text-gray-500 hover:text-[#E53935] text-sm transition-colors">
+                Terms of Service
+              </Link>
               <p className="text-gray-500 text-sm">© 2025 SessionFlow. All rights reserved.</p>
             </div>
           </div>
