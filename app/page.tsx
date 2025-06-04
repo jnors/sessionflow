@@ -50,15 +50,15 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <Image src="/images/logo.png" alt="SessionFlow Logo" width={180} height={40} className="h-8 w-auto" />
             <div className="space-x-4">
+              <Button className="bg-[#E53935] hover:bg-red-600 text-white" onClick={scrollToPricing}>
+                Pre-Order Pro
+              </Button>
               <Button
                 variant="outline"
                 className="border-[#E53935] text-[#E53935] hover:bg-[#E53935] hover:text-white"
                 onClick={scrollToForm}
               >
                 Join Waitlist
-              </Button>
-              <Button className="bg-[#E53935] hover:bg-red-600 text-white" onClick={scrollToPricing}>
-                Pre-Order Pro
               </Button>
             </div>
           </div>
@@ -97,6 +97,17 @@ export default function HomePage() {
               <p className="text-sm text-gray-500">
                 Limited to the first 100 subscribers. Full refund if not live within 4 months.
               </p>
+              <div className="flex justify-center sm:justify-start mt-4 gap-x-4 items-center">
+                <p className="text-xl text-gray-600 mb-0 leading-relaxed">Got questions?</p>
+                <Button
+                  variant="outline"
+                  className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 flex items-center gap-3"
+                  onClick={() => window.open("https://calendar.app.google/tUjXdGTcdoaaphef8", "_blank")}
+                >
+                  <Image src="/images/founder.jpg" alt="João Silva" width={32} height={32} className="rounded-full" />
+                  Book a call with João
+                </Button>
+              </div>
             </div>
             <div className="flex justify-center">
               <div className="relative">
@@ -310,7 +321,7 @@ export default function HomePage() {
 
       {/* Pricing Section */}
       <section id="pricing" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 mb-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">Pricing That Grows With You</h2>
             <p className="text-gray-600">Only pay when your practice grows</p>
@@ -354,9 +365,7 @@ export default function HomePage() {
                 </p>
                 <div className="mt-6">
                   <Link href="https://buy.stripe.com/4gM00kafk8RI9lG75Q0RG01" target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-[#E53935] hover:bg-red-600 text-white font-semibold">
-                      Get Early Access
-                    </Button>
+                    <Button className="bg-[#E53935] hover:bg-red-600 text-white font-semibold">Get Early Access</Button>
                   </Link>
                 </div>
               </CardHeader>
@@ -371,6 +380,17 @@ export default function HomePage() {
               </CardHeader>
             </Card>
           </div>
+          <div className="flex justify-center mt-12 gap-x-4 items-center">
+                <p className="text-xl text-gray-600 mb-0 leading-relaxed">Got questions?</p>
+                <Button
+                  variant="outline"
+                  className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 flex items-center gap-3"
+                  onClick={() => window.open("https://calendar.app.google/tUjXdGTcdoaaphef8", "_blank")}
+                >
+                  <Image src="/images/founder.jpg" alt="João Silva" width={32} height={32} className="rounded-full" />
+                  Book a call with João
+                </Button>
+              </div>
         </div>
       </section>
 
