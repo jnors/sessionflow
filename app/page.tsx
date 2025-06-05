@@ -28,7 +28,7 @@ export default function HomePage() {
     script.src = "https://tally.so/widgets/embed.js"
     script.onload = () => {
       if (typeof window !== "undefined" && (window as any).Tally) {
-        ;(window as any).Tally.loadEmbeds()
+        ; (window as any).Tally.loadEmbeds()
       }
     }
     document.body.appendChild(script)
@@ -49,13 +49,13 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Image src="/images/logo.png" alt="SessionFlow Logo" width={180} height={40} className="h-8 w-auto" />
-            <div className="space-x-4">
+            <div className="space-x-4 flex flex-row overflow-x-auto">
               <Button className="bg-[#E53935] hover:bg-red-600 text-white" onClick={scrollToPricing}>
                 Pre-Order Pro
               </Button>
               <Button
                 variant="outline"
-                className="border-[#E53935] text-[#E53935] hover:bg-[#E53935] hover:text-white"
+                className="border-[#E53935] text-[#E53935] hover:bg-[#E53935] hover:text-white hidden sm:inline-block"
                 onClick={scrollToForm}
               >
                 Join Waitlist
@@ -239,7 +239,7 @@ export default function HomePage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#212121] mb-4">How It Works</h2>
@@ -280,7 +280,7 @@ export default function HomePage() {
                       {index + 1}
                     </div>
                   </div>
-                  <div>
+                  <div className="max-w-md">
                     <p className="text-lg text-[#212121] font-semibold">{step.title}</p>
                     <p className="text-gray-600 text-sm">
                       {step.icon} {step.desc}
@@ -290,34 +290,45 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* Right: App Screens */}
-            <div className="flex justify-center space-x-4">
-              <div className="w-48 h-[400px] bg-[#212121] rounded-[2rem] p-2 shadow-xl">
-                <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden">
-                  <Image
-                    src="/images/calendar.png"
-                    alt="Calendar view"
-                    width={192}
-                    height={396}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="w-48 h-[400px] bg-[#212121] rounded-[2rem] p-2 shadow-xl">
-                <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden">
-                  <Image
-                    src="/images/list-overview.png"
-                    alt="Client management"
-                    width={192}
-                    height={396}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+            {/* Carousel-style scrollable app screens (mobile phone style) */}
+<div className="overflow-x-auto snap-x snap-mandatory -mx-4 px-4">
+  <div className="flex gap-4 w-full">
+    {/* Card 1 */}
+    <div className="snap-start shrink-0 w-[12rem] sm:w-[14rem]">
+      <div className="w-full h-[400px] bg-[#212121] rounded-[2rem] p-2 shadow-xl">
+        <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden">
+          <Image
+            src="/images/calendar.png"
+            alt="Calendar view"
+            width={192}
+            height={396}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    {/* Card 2 */}
+    <div className="snap-start shrink-0 w-[12rem] sm:w-[14rem]">
+      <div className="w-full h-[400px] bg-[#212121] rounded-[2rem] p-2 shadow-xl">
+        <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden">
+          <Image
+            src="/images/list-overview.png"
+            alt="Client management"
+            width={192}
+            height={396}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
+
 
       {/* Pricing Section */}
       <section id="pricing" className="py-16 bg-white">
@@ -381,16 +392,16 @@ export default function HomePage() {
             </Card>
           </div>
           <div className="flex justify-center mt-12 gap-x-4 items-center">
-                <p className="text-xl text-gray-600 mb-0 leading-relaxed">Got questions?</p>
-                <Button
-                  variant="outline"
-                  className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 flex items-center gap-3"
-                  onClick={() => window.open("https://calendar.app.google/tUjXdGTcdoaaphef8", "_blank")}
-                >
-                  <Image src="/images/founder.jpg" alt="João Silva" width={32} height={32} className="rounded-full" />
-                  Book a call with João
-                </Button>
-              </div>
+            <p className="text-xl text-gray-600 mb-0 leading-relaxed">Got questions?</p>
+            <Button
+              variant="outline"
+              className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 flex items-center gap-3"
+              onClick={() => window.open("https://calendar.app.google/tUjXdGTcdoaaphef8", "_blank")}
+            >
+              <Image src="/images/founder.jpg" alt="João Silva" width={32} height={32} className="rounded-full" />
+              Book a call with João
+            </Button>
+          </div>
         </div>
       </section>
 
