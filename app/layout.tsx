@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Smarter client sessions. Without the chaos.',
     generator: 'v0.dev'
 }
-
+ 
 export default function RootLayout({
   children,
 }: Readonly<{
